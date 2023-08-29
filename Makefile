@@ -14,10 +14,13 @@ SRC-5 = binary_tree_print.c 5-binary_tree_is_root.c 5-main.c \
 SRC-6 = binary_tree_print.c 6-main.c 6-binary_tree_preorder.c \
 	0-binary_tree_node.c
 SRC-7 = binary_tree_print.c 7-main.c 7-binary_tree_inorder.c 0-binary_tree_node.c
+SRC-8 = binary_tree_print.c 8-main.c 8-binary_tree_postorder.c \
+	0-binary_tree_node.c
 FILES = binary_trees.h 0-binary_tree_node.c 1-binary_tree_insert_left.c \
 	2-binary_tree_insert_right.c 3-binary_tree_delete.c \
 	4-binary_tree_is_leaf.c 5-binary_tree_is_root.c \
-	6-binary_tree_preorder.c
+	6-binary_tree_preorder.c 7-binary_tree_inorder.c \
+	8-binary_tree_postorder.c
 
 task-0: $(SRC-0)
 	@$(CC) $(CFLAGS) $(SRC-0) -o 0-node
@@ -50,6 +53,10 @@ task-6: $(SRC-6)
 task-7: $(SRC-7)
 	@$(CC) $(CFLAGS) $(SRC-7) -o 7-in
 	./7-in && rm 7-in
+
+task-8: $(SRC-8)
+	@$(CC) $(CFLAGS) $(SRC-8) -o 8-post
+	./8-post && rm 8-post
 
 betty: $(FILES)
 	@betty $(FILES)
