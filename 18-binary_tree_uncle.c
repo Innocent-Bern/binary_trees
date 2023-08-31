@@ -16,5 +16,5 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 		uncle = node->parent->parent->right;
 	if (node->parent == node->parent->parent->right)
 		uncle = node->parent->parent->left;
-	return (unlce);
+	return (uncle);
 }
